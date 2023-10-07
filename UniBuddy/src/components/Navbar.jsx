@@ -15,7 +15,7 @@ const Navbar = ({props = false}) => {
     window.addEventListener("scroll", scrollNav)
 
   return (
-    <div className={`${header ? 'fixed backdrop-blur-md' : 'absolute top-[44px]'} flex justify-between items-center w-full h-[80px] px-24 pt-4 font-pjs z-50`}>
+    <div className={`${header ? 'fixed backdrop-blur-sm' : 'absolute top-[44px]'} flex justify-between items-center w-full h-[80px] px-24 py-4 font-pjs z-50`}>
         <img className='max-w-[280px] h-auto' src={logo} alt="logo" />
 
         <ul className={`flex justify-center items-center gap-10 font-medium text-lg ${props ? 'text-white' : 'text-black' }`}>

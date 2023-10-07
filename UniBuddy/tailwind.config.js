@@ -12,9 +12,8 @@ export default {
         'nw300' : '#707070',
         'nb100' : '1B1B1B',
         'transgm' : '#505050'
-  
       },
-      
+
     },
 
     fontFamily: {

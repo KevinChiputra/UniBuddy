@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../assets/logo.webp'
 import run from '../assets/runEmoji.png'
 
-const Navbar = () => {
+const Navbar = ({props = false}) => {
 
     const[header, setHeader] = useState(false)
 
@@ -17,11 +18,11 @@ const Navbar = () => {
     <div className={`${header ? 'fixed backdrop-blur-md' : 'absolute top-[44px]'} flex justify-between items-center w-full h-[80px] px-24 pt-4 font-pjs z-50`}>
         <img className='max-w-[280px] h-auto' src={logo} alt="logo" />
 
-        <ul className='flex justify-center items-center gap-10 font-medium text-lg'>
-            <li>Home</li>
-            <li>Discover</li>
-            <li>Forum</li>
-            <li>About</li>
+        <ul className={`flex justify-center items-center gap-10 font-medium text-lg ${props ? 'text-white' : 'text-black' }`}>
+            <Link to='/'>Home</Link>
+            <Link to='/discover' >Discover</Link>
+            <Link to='/forum' >Forum</Link>
+            <Link to='/about' >About</Link>
         </ul>
 
         <a href="">
